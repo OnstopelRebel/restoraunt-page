@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Restorant</title>
+    <link rel="stylesheet" href="css.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml" />
@@ -29,8 +30,99 @@
     />
   </head>
   <body>
-    <header class="page-header"></header>
-    <main class="page-main"></main>
+    <header class="page-header">
+      <div class="page-header__top">
+        <a href="123456789" class="phone-number">Call - 123 456 789</a>
+        <a href="#" class="page-header__logo">
+          <img
+            src="https://www.fillmurray.com/378/188"
+            alt="Логотип ресторана"
+            width="378"
+            height="188"
+          />
+        </a>
+        <button class="button yellow-button reservation-button" type="button">
+          Reservation
+        </button>
+      </div>
+      <div class="page-header__bottom">
+        <nav class="main-navigation">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">Home</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">About Us</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">Our Menu</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">Pages</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">Blog</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="#" class="main-navigation__link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link"><span class="visualli-hidden">Instagramm</span></a>
+          </li>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link"><span class="visualli-hidden">Facebook</span></a>
+          </li>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link"><span class="visualli-hidden">Twitter</span></a>
+          </li>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link"><span class="visualli-hidden">Pinterest</span></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Сайт Ресторана</h1>
+      <section class="welcom-section">
+        <div class="welcome-section__container">
+          <div class="welcome-section__left-side">
+            <h2 class="welcome-section__title">Welcome to Restaurant</h2>
+            <p class="welcome-section__text">The people, food and the prime locations make the perfect place good friends & family to come together and have great time.</p>
+            <button class="button stroke-button menue-button" type="button">View Menu</button>
+          </div>
+          <div class="welcome-section__right-side"></div>
+        </div>
+      </section>
+      <section class="about-section">
+        <h2 class="visualli-hidden">Информация о ресторане</h2>
+        <div class="about-section__top">
+          <article class="information">
+            <div class="information__container information__container--locate">
+              <h4 class="information__title">Locate Us</h4>
+              <span class="information__text">Riverside 25, San Diego, California</span>
+            </div>
+          </article>
+          <article class="information">
+            <div class="information__container information__container--open-hours">
+              <h4 class="information__title">Open Hours</h4>
+              <span class="information__text">Mon To Fri 9:00 AM - 9:00 PM</span>
+            </div>
+          </article>
+          <article class="information">
+            <div class="information__container information__container--reservation">
+              <h4 class="information__title">Reservation</h4>
+              <a href="mailto:restaurantate@gmail.com" class="information__text">restaurantate@gmail.com</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
     <footer class="page-footer"></footer>
     <script src="js/index.js"></script>
   </body>
