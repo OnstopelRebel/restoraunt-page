@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import plumber from "gulp-plumber";
-import less from "gulp-less";
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import browser from "browser-sync";
@@ -13,13 +14,15 @@ import svgo from "gulp-svgmin";
 import del from "del";
 import svgstore from "gulp-svgstore";
 
+const sass = gulpSass(dartSass);
+
 // Styles
 
 export const styles = () => {
   return gulp
-    .src("source/less/style.less", { sourcemaps: true })
+    .src("source/sass/style.sass", { sourcemaps: true })
     .pipe(plumber())
-    .pipe(less())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer(), csso()]))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css", { sourcemaps: "." }))
@@ -137,8 +140,7 @@ const server = (done) => {
 
 const watcher = () => {
   gulp
-    .watch("source/less/**/*.less", gulp.series(styles))
-    .on("change", browser.reload);
+    .watch("source/sass/**/*.sass", gulp.series(styles)).on("save", browser.reload);
   gulp.watch("source/*.html", gulp.series(html)).on("change", browser.reload);
 };
 
